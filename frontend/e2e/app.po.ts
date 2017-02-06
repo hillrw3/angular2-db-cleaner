@@ -1,8 +1,9 @@
 import { browser, element, by } from 'protractor';
 
 export class FrontendPage {
-  navigateTo() {
-    return browser.get('/');
+  navigateTo(path? : string) {
+    const _path = path || '/';
+    return browser.get(_path);
   }
 
   getParagraphText() {
